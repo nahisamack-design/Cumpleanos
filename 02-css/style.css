@@ -1,0 +1,998 @@
+/*====================================================
+            GOOGLE FONTS
+====================================================*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap');
+
+
+/*====================================================
+                    VARIABLES
+====================================================*/
+
+:root{
+
+    --rosa:#f66d9b;
+    --rosa-claro:#ffd7e6;
+    --rosa-suave:#fff1f7;
+    --crema:#fffdf8;
+    --dorado:#d4af37;
+    --texto:#444;
+    --titulo:#8f3658;
+    --blanco:#ffffff;
+
+    --sombra:0 15px 40px rgba(0,0,0,.12);
+
+}
+
+
+/*====================================================
+                    RESET
+====================================================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:linear-gradient(135deg,#fffdf8,#fff6ef,#fff0f6);
+
+    color:var(--texto);
+
+    overflow-x:hidden;
+
+    min-height:100vh;
+
+    position:relative;
+
+}
+
+
+/*====================================================
+                FONDO DECORATIVO
+====================================================*/
+
+body::before{
+
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+    background:
+
+    radial-gradient(circle at top left,#ffdce8 0%,transparent 30%),
+
+    radial-gradient(circle at bottom right,#fff2c7 0%,transparent 35%),
+
+    radial-gradient(circle at center,#ffffff 0%,transparent 60%);
+
+    z-index:-3;
+
+}
+
+
+/*====================================================
+                CONTENEDOR GENERAL
+====================================================*/
+
+.container{
+
+    width:90%;
+
+    max-width:1200px;
+
+    margin:auto;
+
+}
+
+
+/*====================================================
+                    SECCIONES
+====================================================*/
+
+section{
+
+    width:100%;
+
+    padding:90px 20px;
+
+}
+
+
+/*====================================================
+                    TITULOS
+====================================================*/
+
+h1{
+
+    font-family:'Playfair Display',serif;
+
+    font-size:58px;
+
+    color:var(--titulo);
+
+    margin-bottom:20px;
+
+}
+
+h2{
+
+    font-family:'Playfair Display',serif;
+
+    color:var(--titulo);
+
+}
+
+p{
+
+    line-height:1.9;
+
+    font-size:18px;
+
+}
+
+
+/*====================================================
+                    BOTONES
+====================================================*/
+
+button{
+
+    border:none;
+
+    cursor:pointer;
+
+    padding:18px 42px;
+
+    border-radius:50px;
+
+    background:linear-gradient(45deg,#ff7ba7,#ff9fb9);
+
+    color:white;
+
+    font-size:18px;
+
+    font-weight:600;
+
+    transition:.35s;
+
+    box-shadow:0 15px 35px rgba(255,105,145,.35);
+
+}
+
+button:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 20px 40px rgba(255,105,145,.45);
+
+}
+
+
+/*====================================================
+                TARJETAS
+====================================================*/
+
+.card{
+
+    background:rgba(255,255,255,.75);
+
+    backdrop-filter:blur(14px);
+
+    border-radius:25px;
+
+    box-shadow:var(--sombra);
+
+    padding:35px;
+
+}
+
+
+/*====================================================
+                IMÁGENES
+====================================================*/
+
+img{
+
+    max-width:100%;
+
+    display:block;
+
+}
+
+.foto{
+
+    border-radius:25px;
+
+    border:8px solid white;
+
+    box-shadow:var(--sombra);
+
+}
+
+
+/*====================================================
+                CORAZONES
+====================================================*/
+
+.hearts{
+
+    position:fixed;
+
+    inset:0;
+
+    pointer-events:none;
+
+    overflow:hidden;
+
+    z-index:-1;
+
+}
+
+.heart{
+
+    position:absolute;
+
+    color:#ff7ba7;
+
+    animation:subir linear infinite;
+
+    opacity:.7;
+
+}
+
+@keyframes subir{
+
+    0%{
+
+        transform:translateY(100vh) scale(.5);
+
+        opacity:0;
+
+    }
+
+    20%{
+
+        opacity:.8;
+
+    }
+
+    100%{
+
+        transform:translateY(-120px) scale(1.3);
+
+        opacity:0;
+
+    }
+
+}
+
+
+/*====================================================
+                FLORES
+====================================================*/
+
+.flowers{
+
+    width:100%;
+
+    text-align:center;
+
+    font-size:34px;
+
+    margin-top:25px;
+
+    animation:flotar 4s ease-in-out infinite;
+
+}
+
+@keyframes flotar{
+
+    50%{
+
+        transform:translateY(8px);
+
+    }
+
+}
+/*====================================================
+                PORTADA - 01 INDEX
+====================================================*/
+
+.inicio{
+
+    width:90%;
+    max-width:1100px;
+
+    margin:60px auto 80px;
+
+    background:rgba(255,255,255,.75);
+
+    backdrop-filter:blur(18px);
+
+    border-radius:35px;
+
+    padding:60px;
+
+    text-align:center;
+
+    box-shadow:0 20px 55px rgba(0,0,0,.12);
+
+    animation:aparecer 1.2s ease;
+
+}
+
+.inicio h3{
+
+    color:var(--rosa);
+
+    font-size:22px;
+
+    font-weight:500;
+
+    margin-bottom:15px;
+
+}
+
+.inicio h1{
+
+    font-size:68px;
+
+    margin-bottom:10px;
+
+}
+
+.inicio h2{
+
+    font-size:40px;
+
+    color:#d45d79;
+
+    margin-bottom:30px;
+
+}
+
+.inicio p{
+
+    max-width:760px;
+
+    margin:0 auto;
+
+    font-size:21px;
+
+    color:#555;
+
+    line-height:2;
+
+}
+
+.fotoPrincipal{
+
+    width:360px;
+
+    height:460px;
+
+    object-fit:cover;
+
+    border-radius:25px;
+
+    margin:45px auto;
+
+    border:8px solid white;
+
+    box-shadow:
+    0 20px 45px rgba(0,0,0,.18),
+    0 0 35px rgba(255,170,200,.35);
+
+    transition:.45s;
+
+}
+
+.fotoPrincipal:hover{
+
+    transform:scale(1.03);
+
+}
+
+.inicio a{
+
+    text-decoration:none;
+
+}
+
+.inicio button{
+
+    margin-top:15px;
+
+}
+
+/*====================================================
+                ANIMACIONES
+====================================================*/
+
+@keyframes aparecer{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(50px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+/*====================================================
+                02 - RECUERDOS
+====================================================*/
+
+.recuerdos{
+
+    width:90%;
+    max-width:1100px;
+
+    margin:60px auto;
+
+    text-align:center;
+
+    animation:aparecer 1.2s ease;
+
+}
+
+.recuerdos h1{
+
+    font-size:60px;
+
+    margin-bottom:25px;
+
+}
+
+.intro{
+
+    max-width:800px;
+
+    margin:0 auto 45px;
+
+    font-size:20px;
+
+    color:#666;
+
+    line-height:2;
+
+}
+
+.fotoRecuerdo{
+
+    width:380px;
+
+    max-width:95%;
+
+    margin:auto;
+
+    border-radius:30px;
+
+    border:8px solid white;
+
+    box-shadow:0 20px 50px rgba(0,0,0,.15);
+
+    transition:.4s;
+
+}
+
+.fotoRecuerdo:hover{
+
+    transform:scale(1.03);
+
+}
+
+/*==========================
+        TARJETAS
+==========================*/
+
+.timeline{
+
+    width:90%;
+
+    max-width:1100px;
+
+    margin:80px auto;
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+    gap:30px;
+
+}
+
+.card{
+
+    background:white;
+
+    border-radius:25px;
+
+    padding:35px;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.10);
+
+    transition:.35s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.card span{
+
+    font-size:50px;
+
+    display:block;
+
+    margin-bottom:20px;
+
+}
+
+.card h2{
+
+    margin-bottom:15px;
+
+    font-size:26px;
+
+}
+
+.card p{
+
+    color:#666;
+
+    line-height:1.8;
+
+}
+
+/*==========================
+        BOTÓN
+==========================*/
+
+.continuar{
+
+    text-align:center;
+
+    margin:70px 0 100px;
+
+}
+/* ============================= */
+/* PÁGINA DEL MENSAJE FINAL */
+/* ============================= */
+
+.mensaje-final {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    padding: 30px;
+
+    background: linear-gradient(
+        135deg,
+        #ffe0ec,
+        #fff5f8,
+        #ffd6e5
+    );
+
+    animation: aparecer 1.5s ease;
+}
+
+.mensaje-final h1 {
+    color: #d6336c;
+    font-size: 42px;
+    margin-bottom: 25px;
+}
+
+.mensaje-final p {
+    max-width: 650px;
+    font-size: 20px;
+    line-height: 1.7;
+    color: #5a2a3a;
+}
+
+.mensaje-final h2 {
+    color: #c9184a;
+    margin: 25px 0;
+}
+
+.corazones {
+    font-size: 35px;
+    margin-bottom: 20px;
+    animation: flotar 2s infinite ease-in-out;
+}
+
+.mensaje-final button {
+    border: none;
+    padding: 15px 28px;
+
+    background: #d6336c;
+    color: white;
+
+    font-size: 18px;
+    border-radius: 30px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.mensaje-final button:hover {
+    transform: scale(1.08);
+    background: #c9184a;
+}
+
+.sorpresa {
+    display: none;
+
+    margin-top: 30px;
+    padding: 25px;
+
+    max-width: 550px;
+
+    background: white;
+    border-radius: 20px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+
+    color: #6a1b3f;
+    font-size: 20px;
+
+    animation: aparecer 1s ease;
+}
+
+/* ============================= */
+/* ANIMACIONES */
+/* ============================= */
+
+@keyframes aparecer {
+
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+@keyframes flotar {
+
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100%{
+      transform: translateY(0);
+    }
+}
+/* ============================= */
+/* PÁGINA FINAL */
+/* ============================= */
+
+.final {
+
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 30px;
+
+    background: linear-gradient(
+        135deg,
+        #ffd6e7,
+        #fff0f6,
+        #ffc2d9
+    );
+
+    overflow: hidden;
+
+}
+
+.final h1 {
+
+    color: #c9184a;
+
+    font-size: 42px;
+
+    margin-bottom: 30px;
+
+    animation: aparecer 1.5s ease;
+
+}
+
+.confeti {
+
+    font-size: 30px;
+
+    margin-bottom: 15px;
+
+    animation: flotar 2s infinite ease-in-out;
+
+}
+
+
+/* SOBRE */
+
+.sobre {
+
+    position: relative;
+
+    width: 320px;
+    height: 220px;
+
+    margin: 30px;
+
+}
+
+
+/* PARTE TRASERA DEL SOBRE */
+
+.sobre::before {
+
+    .sobre::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    background: #e85d8f;
+
+    border-radius: 10px;
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+
+    z-index: 2;
+
+    clip-path: polygon(
+        0 0,
+        50% 55%,
+        100% 0,
+        100% 100%,
+        0 100%
+    );
+
+}
+
+}
+
+
+/* CARTA */
+
+.carta {
+
+    position: absolute;
+
+    left: 10%;
+
+    bottom: 10px;
+
+    width: 80%;
+
+    min-height: 180px;
+
+    padding: 25px;
+
+    box-sizing: border-box;
+
+    background: white;
+
+    border-radius: 10px;
+
+    opacity: 0;
+
+    transform: translateY(80px);
+
+    transition: 1s;
+
+    z-index: 1;
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.15);
+
+}
+
+
+/* SOBRE ABIERTO */
+
+.sobre.abierto .carta {
+
+    opacity: 1;
+
+    transform: translateY(-100px);
+    .sobre::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    background: #e85d8f;
+
+    border-radius: 10px;
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+
+    z-index: 2;
+
+    clip-path: polygon(
+        0 0,
+        50% 55%,
+        100% 0,
+        100% 100%,
+        0 100%
+    );
+
+}
+
+}
+
+
+.carta h2 {
+
+    color: #c9184a;
+
+}
+
+
+.carta p {
+
+    color: #5a2a3a;
+
+    line-height: 1.6;
+
+}
+
+
+.carta h3 {
+
+    color: #d6336c;
+
+}
+
+
+/* BOTÓN */
+
+.final button {
+
+    border: none;
+
+    padding: 15px 30px;
+
+    border-radius: 30px;
+
+    background: #d6336c;
+
+    color: white;
+
+    font-size: 18px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+}
+
+
+.final button:hover {
+
+    transform: scale(1.08);
+
+    background: #c9184a;
+
+}
+
+
+.final-texto {
+
+    margin-top: 30px;
+
+    color: #6a1b3f;
+
+    font-size: 17px;
+
+}
+.sobre {
+    position: relative;
+    width: 320px;
+    height: 220px;
+    margin: 40px auto;
+    background: #e85d8f;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* Parte triangular del sobre */
+.sobre::before {
+    content: "";
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 0;
+    height: 0;
+
+    border-left: 160px solid transparent;
+    border-right: 160px solid transparent;
+    border-top: 120px solid #f58aae;
+
+    z-index: 3;
+}
+
+/* Carta */
+.carta {
+    position: absolute;
+
+    left: 50%;
+    bottom: 10px;
+
+    width: 300%;
+    min-height: 420px;
+
+    padding: 25px;
+
+    box-sizing: border-box;
+
+    background: white;
+    border-radius: 12px;
+
+    opacity: 0;
+
+    transform: translate(-50%,30px);
+
+    transition: 1s;
+
+    z-index: 5;
+    box-shadow: 0 8px 25px rgba(0,0, 0,0,2);
+    overflow-y: auto;
+}
+
+/* Cuando se abre */
+.sobre.abierto .carta {
+    opacity: 1;
+    transform: translate(-50%,-100px);
+}
